@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.1'
     id 'io.spring.dependency-management' version '1.1.0'
+    id 'maven-publish'
 }
 
 group = 'kr.co.maro'
@@ -9,6 +10,18 @@ version = '1.0-SNAPSHOT'
 
 java {
     sourceCompatibility = '17'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication){
+            groupId = 'kr.co.maro'
+            artifactId = 'maro-authn'
+            version = '1.0'
+
+            from components.java
+        }
+    }
 }
 
 repositories {
