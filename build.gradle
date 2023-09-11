@@ -15,7 +15,7 @@ java {
 publishing {
     publications {
         mavenJava(MavenPublication){
-            groupId = 'kr.co.maro'
+            groupId = 'github.com.MRSTK90'
             artifactId = 'maro-authn'
             version = '1.0'
 
